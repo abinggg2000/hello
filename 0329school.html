@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>985、211大学判断</title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="(item) in jiubawu"><span v-if="item.name==message">985、211</span></p>
+			<p v-for="(item) in eryaoyao"><span v-if="item.name==message">211</span></p>
+			<input v-model="message"/>
+		</div>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					message:'',
+					jiubawu:[
+						{
+							name:'北京大学'
+						},
+						{
+							name:'清华大学'
+						},
+						
+					],
+					eryaoyao:[
+						{
+							name:'广西大学'
+						},
+						{
+							name:'中国矿业大学'
+						},
+						
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

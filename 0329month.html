@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>月份天数输出</title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="(item) in jsy"><span v-if="item.name==message">31天</span></p>
+			<p v-for="(item) in osy"><span v-if="item.name==message">30天</span></p>
+			<p v-for="(item) in ey"><span v-if="item.name==message">28天</span></p>
+			<input v-model="message"/>
+		</div>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					message:'',
+					jsy:[
+						{
+							name:'1'
+						},
+						{
+							name:'3'
+						},
+						{
+							name:'5'
+						},
+						{
+							name:'7'
+						},
+						{
+							name:'8'
+						},
+						{
+							name:'10'
+						},
+						{
+							name:'12'
+						},
+					],
+					osy:[
+						{
+							name:'4'
+						},
+						{
+							name:'6'
+						},
+						{
+							name:'9'
+						},
+						{
+							name:'11'
+						},
+					],
+					ey:[
+						{
+							name:'2'
+						},
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
